@@ -6,7 +6,7 @@
     }
   ],
   "name": "NewProject",
-  "namespace": "",
+  "namespace": "prodorg",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "58.0"
 }
