@@ -1,0 +1,18 @@
+<template>
+    <!--lightning-card title="Which is the gratest number" icon-name="standard:lead">
+        <lightning-input type="number" value={firstvalue} onchange={handlefirstvalue}></lightning-input>
+        <lightning-input type="number" value={secondvalue} onchange={handlesecondvalue}></lightning-input>
+        <lightning-input type="number" value={thirdvalue} onchange={handlethirdvalue}></lightning-input>
+
+        <lightning-button variant="base" label="Calculate" title="Calculate" onclick={handleCalculate} ></lightning-button>
+        <lightning-button variant="brand-outline" label="Reset" title="Calculate" onclick={handleReset} ></lightning-button>
+    </lightning-card-->
+    <lightning-card title="Which is the gratest number" icon-name="standard:lead">
+        <lightning-input type="number" value={firstvalue} onchange={execute} name=first></lightning-input>
+        <lightning-input type="number" value={secondvalue} onchange={execute} name=second></lightning-input>
+        <lightning-input type="number" value={thirdvalue} onchange={execute} name=third></lightning-input>
+
+        <lightning-button variant="base" label="Calculate" title="Calculate" onclick={handleCalculate} ></lightning-button>
+        <lightning-button variant="brand-outline" label="Reset" title="Calculate" onclick={handleReset} ></lightning-button>
+    </lightning-card>
+</template>

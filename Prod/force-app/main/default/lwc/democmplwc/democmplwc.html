@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="visualize the cmp in aura" icon-name="standard:account"> 
+      <lightning-input type="text" value={desiredvalue} onchange={printthevalue}></lightning-input>
+      {desiredvalue}
+      <lightning-input type="date" value={desireddate} onchange={printthedate}></lightning-input>
+      {desireddate}
+      <lightning-input type="datetime"  onchange={printdatetime}></lightning-input>
+      {desireddatetime}
+    </lightning-card>
+</template>

@@ -1,0 +1,86 @@
+<template>
+    <div>
+        This is demo on Hardcoded values : {Hardcoded} <br>
+        onload of data : {onLoadVar} <br>
+        onclick of the button : {onclickOfButton}<br>
+        on click of the label : {onClickOfLabel}<br>
+        <lightning-button variant="base"
+         label="on click of the button data will be shown" 
+         title="click the button to see data"
+         onclick={handleClick} 
+         class="slds-m-right_large">
+        </lightning-button>
+
+    </div>
+    <div>
+        <h2>
+            Live capture of the data
+        </h2>
+        <lightning-input type="text"
+         label="Enter data Sandeep" 
+         value= {dynamicValue}
+         onchange= {captureOnchangeValue}></lightning-input>
+         <p>
+            personDetails : {dynamicValue}
+         </p>
+    </div>
+<template if:false={Diplay}>
+    <p>
+        This data will be displayed on the template depending on the boolean value;
+    </p>
+</template>
+<template if:true={Diplay}>
+<p>
+    This data will populate when details is true;
+</p>
+</template>
+<div>
+    <lightning-input type="text" label="Enter Marks Got"
+     value={marksAttained} onchange={captureAttainedMarks}></lightning-input>
+    marksGot by student : {marksAttained}
+    <lightning-input type="text" label="Total Marks" value={totalMarks} onchange={captureTotalMarks}></lightning-input>
+     Total marksGot by student : {totalMarks}
+     <lightning-button variant="base"
+      label="calculate the value"
+       title="Looks like a link"
+        onclick={calculate}
+         class="slds-m-left_x-small"></lightning-button>
+         <template if:true={showresult1}>
+            resultwegot = {totalPercentage}
+         </template>         
+</div>
+<div>
+<lightning-input type="text" label="enter the value" value={Details} onchange={capturedetails}></lightning-input>
+getdetails : {Details}
+<lightning-input type="date" label="enter the date" value={datedetails} onchange={capturedate}></lightning-input>
+getdatedetails : {datedetails}
+<lightning-input type="file" label="enter the date" value={filesdetails} onchange={capturefiles}></lightning-input>
+</div> 
+<div>
+    <lightning-button variant="else"
+      label="condition bassed"
+       title="Looks like a link"
+        onclick={ansvwer}
+         class="slds-m-left_x-small"></lightning-button>
+</div> 
+<lightning-card  title="Greatest digit">
+    <lightning-button label="Calculate result" slot="actions" onclick={getResult}></lightning-button>
+    <lightning-button label="Reset" slot="actions" onclick={ReSetData}></lightning-button>
+    <lightning-input type="number" label="First number" value={FirstNumber} onchange={captureFirstNumber}></lightning-input>
+    <lightning-input type="number" label="Second number" value={SecondNumber} onchange={captureSecondNumber}></lightning-input>
+    <lightning-input type="number" label="Third number" value={ThirdNumber} onchange={captureThirdNumber}></lightning-input>
+    <p slot="footer">Thank you</p>
+</lightning-card>
+ name of the nominee : {personaName}
+ <lightning-card  title="array">
+    <template for:each={colors} for:item="a">
+        {a}
+    </template>
+</lightning-card>
+<lightning-card  title="array">
+    <template iterator:item={colors}>
+       <p key={item.value}>  {item.value} </p>
+    </template>
+</lightning-card>
+ 
+</template>

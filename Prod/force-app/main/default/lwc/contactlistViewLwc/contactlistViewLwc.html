@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="Custom view of contacts">
+        <div slot ="actions">
+        <lightning-button label="Create new contact" onclick={navigatetocreatenewContact}></lightning-button>
+        <lightning-button label="Delete contact" onclick={navigatetoDeleteContact}></lightning-button>
+    </div>
+    <div class= "slds-card__body_inner">
+    <p>Selected contacts: {selectedContactLen}</p>
+    <div class="slds-grid slds-gutters slds-p-bottom_small slds-p-left_x-small">
+        <lightning-input type="search" onchange={handlesearch}></lightning-input>
+    </div>
+    <lightning-datatable
+           key-field ="id" 
+           data={contacts} 
+           columns={cols}
+           onrowselection={handleRowSelection}
+           onrowaction={handleRowAction}></lightning-datatable>
+    </div>
+    </lightning-card>
+</template>
